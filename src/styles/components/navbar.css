@@ -1,0 +1,9 @@
+/* styles/components/nav.css */
+
+nav {
+  display: flex;
+  justify-content: center; /* center children horizontally */
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}

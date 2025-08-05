@@ -1,0 +1,32 @@
+/* src/styles/base/_globals.css */
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  text-align: center; /* ✅ Center text by default */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex; /* ✅ Center all children */
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Utility wrapper */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Override for elements that need left alignment */
+.text-left {
+  text-align: left;
+}

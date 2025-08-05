@@ -1,6 +1,8 @@
 // import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
+import JoinTheResistance from "./components/JoinTheResistance";
 import Home from "./pages/Home";
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <JoinTheResistance />
     </>
   );
 }

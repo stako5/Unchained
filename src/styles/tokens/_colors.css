@@ -1,0 +1,10 @@
+/* Example: styles/tokens/_colors.css */
+
+:root {
+  --color-background: #111;
+  --color-text: #fefefe;
+  --color-accent: #ff0055;
+  --color-primary: #4fff4b;
+  --color-primary-dark: #28cc28;
+  --color-border: #333;
+}

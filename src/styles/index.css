@@ -1,3 +1,25 @@
+/* src/styles/index.css */
+
+/* Base styles */
+@import "./base/_reset.css";
+@import "./base/_globals.css";
+@import "./base/_typography.css";
+
+/* Design Tokens */
+@import "./tokens/_colors.css";
+@import "./tokens/_spacing.css";
+@import "./tokens/_typescale.css";
+
+/* Layout */
+@import "./layout/grid.css";
+@import "./layout/containers.css";
+
+/* Component Styles */
+@import "./components/button.css";
+@import "./components/input.css";
+@import "./components/card.css";
+/*
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +87,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
