@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import JoinTheResistance from "./components/JoinTheResistance";
+import EventsSection from "./components/EventsSection";
 import Home from "./pages/Home";
 
 function App() {
-  const [showCTAOnly] = useState(true); // toggle this for dev/test/demo
+  const [showCTAOnly] = useState(false); // toggle this for dev/test/demo
 
   if (showCTAOnly) {
     return <JoinTheResistance />;
@@ -16,6 +17,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <EventsSection />
     </>
   );
 }
