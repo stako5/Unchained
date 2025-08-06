@@ -4,10 +4,11 @@ import "./styles/global.css";
 import Navbar from "./components/Navbar";
 import TicketViewCard from './components/TicketViewCard'
 import JoinTheResistance from "./components/JoinTheResistance";
+import EventsSection from "./components/EventsSection";
 import Home from "./pages/Home";
 
 function App() {
-  const [showCTAOnly] = useState(true); // toggle this for dev/test/demo
+  const [showCTAOnly] = useState(false); // toggle this for dev/test/demo
 
   if (showCTAOnly) {
     return <JoinTheResistance />;
@@ -15,12 +16,13 @@ function App() {
 
   return (
     <>
+
       <Routes>
         <Navbar />
         <Home />
         <Route path="/TicketViewCard" element={<TicketViewCard />} />
       </Routes>
-    </>
+</>
   );
 }
 
