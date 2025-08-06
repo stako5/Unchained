@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
+import TicketViewCard from './components/TicketViewCard'
 import JoinTheResistance from "./components/JoinTheResistance";
 import EventsSection from "./components/EventsSection";
 import Home from "./pages/Home";
@@ -15,10 +16,13 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
-      <EventsSection />
-    </>
+
+      <Routes>
+        <Navbar />
+        <Home />
+        <Route path="/TicketViewCard" element={<TicketViewCard />} />
+      </Routes>
+</>
   );
 }
 
