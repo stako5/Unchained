@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./styles/global.css";
 import Navbar from "./components/Navbar";
@@ -6,11 +6,16 @@ import JoinTheResistance from "./components/JoinTheResistance";
 import Home from "./pages/Home";
 
 function App() {
+  const [showCTAOnly] = useState(true); // toggle this for dev/test/demo
+
+  if (showCTAOnly) {
+    return <JoinTheResistance />;
+  }
+
   return (
     <>
       <Navbar />
       <Home />
-      <JoinTheResistance />
     </>
   );
 }

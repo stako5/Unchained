@@ -126,7 +126,11 @@ File structure:
 Styles:
 src/
 │
-├── styles/
+├
+├── assets/ # images, icons
+├── components/ # reusable UI components
+├── pages/ # app "screens" (e.g., Home, EventDetail)
+├── styles/ # CSS files (global.css, mobile.css, etc.)
 │ ├── base/
 │ │ ├── \_reset.css # CSS Reset (e.g., Eric Meyer or modern-normalize)
 │ │ ├── \_typography.css # Global font styles, headings, paragraphs
@@ -147,3 +151,6 @@ src/
 │ │ └── containers.css # Page/container width and padding helpers
 │ │
 │ └── index.css # Import all the above in order
+|
+├── App.jsx # main app logic
+└── main.jsx # entry point

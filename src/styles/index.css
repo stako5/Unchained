@@ -18,7 +18,8 @@
 @import "./components/button.css";
 @import "./components/input.css";
 @import "./components/card.css";
-/*
+
+/* Vite-React default styles
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

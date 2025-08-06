@@ -4,25 +4,28 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { storeEmail } from "../utils/emailStorage";
 import "../styles/components/joinTheResistance.css";
+import "../styles/components/waitlistform.css";
 
 const JoinTheResistance = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [userType, setUserType] = useState("fan");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email) {
-      storeEmail(email);
+      storeEmail(email, userType);
       setSubmitted(true);
       setEmail("");
+      setUserType("fan");
     }
   };
 
   return (
-    <section>
+    <section className="join-the-resistance">
       <header>
         <h1>Ready to join the Resistance?</h1>
-        <p>Unchained from the Masters, Reward fans, Dismantle the monopoly.</p>
+        <p> Reward fans, Dismantle the monopoly, Unchain from the 🎟️ Master.</p>
       </header>
 
       <div className="audience-cards">
@@ -53,9 +56,9 @@ const JoinTheResistance = () => {
           <h2>🏟️ Venues</h2>
           <p>
             Next generation ticketing now! Smart contracts prevent fraud,
-            control resale, build trust and a community around your venue while
-            we handle your ticketing with enhanced sales analytics and no bank
-            fees on USD stablecoin transactions.
+            control resale, and build community trust around your venue while we
+            handle your ticketing with enhanced sales analytics and no bank fees
+            on USDC stablecoin transactions.
           </p>
         </div>
       </div>
@@ -65,15 +68,35 @@ const JoinTheResistance = () => {
           <div className="resistance-confirmation">
             <h2>📡 Message Received 📡 </h2>
             <p>
-              <h4>You've reached the resistance!</h4> Watch your inbox... Once
-              you've been vetted, <strong>The Resistance</strong> will contact
-              you about how you can <strong>fight</strong> the oppression from
-              excessive fees and <strong>overthrow</strong> the{" "}
+              <h4>You've reached the resistance!</h4> Watch your inbox...
+              <br></br> Once you've been vetted, <strong>THE RESISTANCE</strong>{" "}
+              will contact you about how you can <strong>FIGHT</strong> the
+              oppression of excessive fees and <strong>OVERTHROW</strong> the{" "}
               <strong>🎟️ "MASTER"</strong>!
             </p>
           </div>
         ) : (
           <>
+            <label htmlFor="userType">
+              Choose your role in the resistance:
+            </label>
+            <select
+              id="userType"
+              value={userType}
+              onChange={(e) => setUserType(e.target.value)}
+            >
+              <option value="fan">
+                Guerrillas (Fans) I'm going to fight for the movement!
+              </option>
+              <option value="artist">
+                Public Component (Artist) I'm going to advocate against the
+                status quo for my fans!
+              </option>
+              <option value="venue">
+                Auxiliary (Venues) We harbor the Resistance and support the
+                community here!{" "}
+              </option>
+            </select>
             <label htmlFor="email">Sign up today for early access:</label>
             <input
               type="email"
